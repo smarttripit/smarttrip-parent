@@ -47,6 +47,7 @@
 		<jmockit.version>1.18</jmockit.version>
 		<javax.servlet-api.version>3.1.0</javax.servlet-api.version>
 		<jayway.jsonpath.version>0.9.0</jayway.jsonpath.version>
+		<velocity.version>1.7</velocity.version>
 	</properties>
 
 	<dependencyManagement>
@@ -56,7 +57,7 @@
 				<artifactId>javax.servlet-api</artifactId>
 				<version>${javax.servlet-api.version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>com.smarttrip</groupId>
 				<artifactId>smarttrip-api</artifactId>
@@ -257,6 +258,12 @@
 				<groupId>commons-codec</groupId>
 				<artifactId>commons-codec</artifactId>
 				<version>${commons-codec.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.velocity</groupId>
+				<artifactId>velocity</artifactId>
+				<version>${velocity.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
