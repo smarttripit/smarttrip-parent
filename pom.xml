@@ -271,6 +271,11 @@
 				<artifactId>platform-file</artifactId>
 				<version>${platform.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.smarttrip</groupId>
+				<artifactId>platform-authcode</artifactId>
+				<version>${platform.version}</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
