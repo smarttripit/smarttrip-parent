@@ -22,6 +22,17 @@
 				<module>../smarttrip-web</module>
 			</modules>
 		</profile>
+		<profile>
+			<id>manage-web</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<modules>
+				<module>../smarttrip-api</module>
+				<module>../smarttrip-service</module>
+				<module>../smarttripmanage-web</module>
+			</modules>
+		</profile>
 	</profiles>
 
 	<properties>
