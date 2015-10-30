@@ -33,6 +33,35 @@
 				<module>../smarttripmanage-web</module>
 			</modules>
 		</profile>
+		
+		<!-- 生产环境 开始 -->
+		<profile>
+			<id>web-product</id>
+			<activation>
+			</activation>
+			<modules>
+				<module>../smarttrip-api</module>
+				<module>../smarttrip-service</module>
+				<module>../smarttrip-web</module>
+			</modules>
+			<properties>
+				<portable.file.name>product.xml</portable.file.name>
+			</properties>
+		</profile>
+		<profile>
+			<id>manage-web-product</id>
+			<activation>
+			</activation>
+			<modules>
+				<module>../smarttrip-api</module>
+				<module>../smarttrip-service</module>
+				<module>../smarttripmanage-web</module>
+			</modules>
+			<properties>
+				<portable.file.name>product.xml</portable.file.name>
+			</properties>
+		</profile>
+		<!-- 生产环境 结束 -->
 	</profiles>
 
 	<properties>
@@ -341,6 +370,9 @@
 			<plugin>
 				<groupId>com.juvenxu.portable-config-maven-plugin</groupId>
 				<artifactId>portable-config-maven-plugin</artifactId>
+				<configuration>
+					<portableConfig>src/main/portable/${portable.file.name}</portableConfig>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
