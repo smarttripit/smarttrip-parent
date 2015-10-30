@@ -37,6 +37,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<portable.maven.version>1.1.5</portable.maven.version>
 		<spring.version>4.0.2.RELEASE</spring.version>
 		<mybatis.version>3.2.7</mybatis.version>
 		<mybatis-spring.version>1.2.2</mybatis-spring.version>
@@ -89,7 +90,7 @@
 				<artifactId>json-path</artifactId>
 				<version>${jayway.jsonpath.version}</version>
 			</dependency>
-			
+
 			<!-- mybatis分页插件 -->
 			<dependency>
 				<groupId>com.github.pagehelper</groupId>
@@ -320,8 +321,28 @@
 						<target>${jdk.version}</target>
 					</configuration>
 				</plugin>
+
+				<!-- 不同环境打包插件 -->
+				<plugin>
+					<groupId>com.juvenxu.portable-config-maven-plugin</groupId>
+					<artifactId>portable-config-maven-plugin</artifactId>
+					<version>${portable.maven.version}</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>replace-package</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>com.juvenxu.portable-config-maven-plugin</groupId>
+				<artifactId>portable-config-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>
