@@ -34,6 +34,35 @@
 			</modules>
 		</profile>
 		
+		<!-- alpha 开始 -->
+		<profile>
+			<id>web-alpha</id>
+			<activation>
+			</activation>
+			<modules>
+				<module>../smarttrip-api</module>
+				<module>../smarttrip-service</module>
+				<module>../smarttrip-web</module>
+			</modules>
+			<properties>
+				<portable.file.name>alpha.xml</portable.file.name>
+			</properties>
+		</profile>
+		<profile>
+			<id>manage-web-alpha</id>
+			<activation>
+			</activation>
+			<modules>
+				<module>../smarttrip-api</module>
+				<module>../smarttrip-service</module>
+				<module>../smarttripmanage-web</module>
+			</modules>
+			<properties>
+				<portable.file.name>alpha.xml</portable.file.name>
+			</properties>
+		</profile>
+		<!-- alpha 结束 -->
+		
 		<!-- 生产环境 开始 -->
 		<profile>
 			<id>web-product</id>
